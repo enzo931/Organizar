@@ -1,0 +1,161 @@
+/* --- Estilo Geral --- */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Modo Escuro (Padrão) --- */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* --- Modo Claro --- */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* --- Cabeçalho --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #181818;
+}
+
+body.light-mode .header {
+    background-color: #ffffff;
+}
+
+/* --- Botão de Tema --- */
+#themeToggle {
+    padding: 10px 15px;
+    background-color: #64b9ff;
+    color: #0a192f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+body.light-mode #themeToggle {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* --- Entrada de Tarefas --- */
+.task-input {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.task-input input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #64b9ff;
+    border-radius: 5px;
+    background-color: #005eff;
+    color: white;
+    outline: none;
+}
+
+body.light-mode .task-input input {
+    background-color: white;
+    color: #333;
+    border: 2px solid #0077cc;
+}
+
+.task-input button {
+    padding: 10px 15px;
+    background-color: #64b9ff;
+    color: #0a192f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+body.light-mode .task-input button {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* --- Kanban Board --- */
+.kanban-board {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* --- Colunas Kanban --- */
+.kanban-column {
+    width: 300px;
+    background: #112240;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    min-height: 400px;
+}
+
+body.light-mode .kanban-column {
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 119, 204, 0.3);
+}
+
+h2 {
+    text-align: center;
+    color: #64b9ff;
+}
+
+body.light-mode h2 {
+    color: #0077cc;
+}
+
+/* --- Tarefas --- */
+.task {
+    background: #64b9ff;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: grab;
+    border-radius: 5px;
+    color: #0a192f;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.2s;
+}
+
+body.light-mode .task {
+    background: #0077cc;
+    color: white;
+}
+
+.task:hover {
+    transform: scale(1.05);
+}
+
+.task-list {
+    min-height: 100px;
+    padding: 10px;
+}
+
+.task-list.dragover {
+    background-color: rgba(100, 255, 218, 0.2);
+    border: 2px dashed #64ffda;
+}
+
+body.light-mode .task-list.dragover {
+    background-color: rgba(0, 119, 204, 0.2);
+    border: 2px dashed #0077cc;
+}
+
+
+
